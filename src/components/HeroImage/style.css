@@ -1,0 +1,24 @@
+.temp {
+  display: flex;
+  justify-content: center;
+  
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 41%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  height: 600px;
+  background-size: 100%, cover;
+  background-position: center;
+
+  animation: animateHeroImage 1s;
+
+  @keyframes animateHeroImage {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
