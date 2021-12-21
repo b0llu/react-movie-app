@@ -29,7 +29,7 @@ const Home = () => {
       ) : null}
       <Grid header="Popular Movies">
         {state.results.map((movie) => (
-          <div>{movie.title}</div>
+          <div key={movie.id}>{movie.title}</div>
         ))}
       </Grid>
     </>
