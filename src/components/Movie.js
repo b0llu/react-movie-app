@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../config";
 
+import BreadCrumb from "./BreadCrumb";
 import Grid from "./Grid";
 import Spinner from "./Spinner";
 
@@ -14,10 +15,13 @@ const Movie = () => {
   const { movieId } = useParams();
 
   const { state: movie, loading, error } = useMovieFetch(movieId);
-  console.log(movie);
+
+  if (loading) return <Spinner />;
+  if (error) return <div>Ehhh try again.</div>;
+
   return (
     <>
-      <div>Movie</div>
+      <BreadCrumb movieTitle={movie.original_title} />
     </>
   );
 };
