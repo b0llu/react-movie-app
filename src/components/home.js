@@ -12,7 +12,7 @@ import SearchBar from "./SearchBar";
 import Button from "./Button";
 
 //hook
-import { useHomeFetch } from "../../src/hooks/useHomeFetch";
+import { useHomeFetch } from "../hooks/useHomeFetch";
 
 // image
 import NoImage from "../images/no_image.jpg";
